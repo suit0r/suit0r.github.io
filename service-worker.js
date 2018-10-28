@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c9e8a1fd2141b935b12b3bc4313263d4.js"
+  "/precache-manifest.c5a5491065a0a28ce9be33a4058015f2.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mortgage-forms"});
