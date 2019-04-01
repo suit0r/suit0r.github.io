@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "./precache-manifest.221ab8224dfa2fd69dfed5d5844df6ea.js"
+  "./precache-manifest.5219d0f44942117f096e0ea4ebcb60fd.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mortgage-forms"});
