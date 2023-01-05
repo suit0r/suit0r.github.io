@@ -1,0 +1,11 @@
+@import "$/scss/vars";
+
+.app {
+  min-height: 100vh;
+  perspective: 282px;
+  padding-bottom: $pad96;
+
+  &__mobile {
+    padding-bottom: 0;
+  }
+}

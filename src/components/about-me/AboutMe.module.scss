@@ -1,0 +1,25 @@
+@import "$/scss/vars";
+
+.photo-blurb {
+  img {
+    border-radius: $brad;
+    margin-right: $pad12;
+    margin-bottom: $pad9;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.school {
+  margin: 0;
+
+  dd {
+    margin-left: 0;
+  }
+
+  span + span {
+    margin-left: $pad6;
+  }
+}

@@ -1,0 +1,37 @@
+@import "$/scss/vars";
+
+.action-bar {
+  color: $blue;
+  margin-bottom: $pad32;
+  padding-bottom: $actionbarbottom;
+}
+
+.actions {
+  display: inline-block;
+  margin-left: $pad12;
+
+  ul {
+    margin-left: -$pad12;
+    margin-bottom: $pad6;
+  }
+
+  li {
+    display: inline;
+    margin-right: $pad12;
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      color: inherit;
+      outline-color: inherit;
+    }
+  }
+}
+
+.highlight-bar {
+  height: $actionbarbottom;
+  left: -$pad12;
+  bottom: -$actionbarbottom;
+  right: 0;
+  background-color: currentColor;
+}

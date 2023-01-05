@@ -1,0 +1,42 @@
+.float {
+  float: left;
+
+  &__right {
+    float: right;
+  }
+}
+
+.clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.pointer {
+  cursor: pointer;
+}

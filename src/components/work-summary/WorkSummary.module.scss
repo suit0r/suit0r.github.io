@@ -1,0 +1,58 @@
+@import "$/scss/vars";
+
+.work {
+  color: $blueblack;
+
+  a {
+    color: inherit;
+
+    &:visited {
+      color: inherit;
+    }
+  }
+
+  :global(.link-icon__wrap) {
+    margin-left: $pad;
+  }
+
+  :global(.link-icon) {
+    height: $pad24;
+    width: $pad24;
+    vertical-align: top;
+  }
+}
+
+.title {
+  img {
+    vertical-align: -2px;
+  }
+}
+
+.stack {
+  font-weight: bold;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.stack,
+.title {
+  margin-bottom: $pad12;
+
+  li {
+    display: inline;
+  }
+
+  img {
+    margin-right: $pad12;
+  }
+}
+
+.responsibilities {
+  margin-top: $pad24;
+
+  li + li {
+    margin-top: $pad12;
+  }
+}
