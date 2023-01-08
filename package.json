@@ -1,13 +1,12 @@
 {
-  "name": "github-cv",
+  "name": "github-page",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "sh deploy.sh"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
