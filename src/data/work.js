@@ -13,6 +13,8 @@ export const work = [
     endDate: "Current",
     employer: "Nobul",
     employerWebsite: "https://nobul.com",
+    aboutEmployer:
+      "An agent marketplace focused on revolutionizing real estate to deliver value and transparency to the consumer",
     title: "Senior Front-end Dev, Team Lead",
     techStack: ["React", "Node", "Postgres", "Firebase", "GCP"],
     responsibilities: [
@@ -46,6 +48,8 @@ export const work = [
     endDate: "August 2021",
     employer: "CFIB",
     employerWebsite: "https://www.cfib-fcei.ca/en/",
+    aboutEmployer:
+      "Canadian Finance Insurance Bureau is an association dedicated to helping consumers find the best businesses",
     title: "Front-end Contractor",
     techStack: ["React", "Nextjs", "Redis", "Azure"],
     responsibilities: [
@@ -63,6 +67,8 @@ export const work = [
     endDate: "February 2019",
     employer: "Girafo",
     employerWebsite: "",
+    aboutEmployer:
+      "Girafo was a small, Canadian mortgage lender who wanted to simplify mortgage applications with a fully dynamic web form",
     title: "Front-end Contractor",
     techStack: ["Vue", "Laravel", "MySQL", "Digital Ocean"],
     responsibilities: [
@@ -80,6 +86,8 @@ export const work = [
     endDate: "February 2019",
     employer: "Keypath Education",
     employerWebsite: "https://keypathedu.com/",
+    aboutEmployer:
+      "Keypath Education facilitates online course application and distribution for premiere post-secondary institutions around the world",
     title: "Web Developer",
     techStack: ["jQuery", "React", "Vue", "MySQL", "University Servers"],
     responsibilities: [
@@ -112,6 +120,8 @@ export const work = [
     endDate: "October 2017",
     employer: "ARIDO",
     employerWebsite: "https://arido.ca/",
+    aboutEmployer:
+      "Association for Registered Interior Designers of Ontario is tasked with the regulatory enforcement and enrollment of Interior Designers in the province",
     title: "Communications Coordinator",
     techStack: ["JavaScript", "Wordpress"],
     responsibilities: [
@@ -132,6 +142,8 @@ export const work = [
     endDate: "August 2015",
     employer: "CARE Centre for IENs",
     employerWebsite: "https://care4nurses.org/",
+    aboutEmployer:
+      "CARE Center is a non-profit organization helping newly immigrated nurses update their skills to transition their practice in Ontario",
     title: "Communications Associate",
     techStack: ["JavaScript", "Wordpress"],
     responsibilities: [

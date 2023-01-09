@@ -1,0 +1,23 @@
+@import "$/scss/vars";
+
+// TODO: styling to match figma
+
+.about-company {
+  background-color: $paper;
+  border-radius: $brad;
+  padding: $pad18;
+  box-shadow: $box;
+  max-width: 214px;
+  right: -107px;
+  top: 0;
+
+  h4 {
+    margin-bottom: $pad12;
+  }
+
+  &__footer {
+    border-top: 1px solid $pale;
+    padding-top: $pad12;
+    margin-top: $pad12;
+  }
+}
