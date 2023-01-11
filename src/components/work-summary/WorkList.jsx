@@ -8,7 +8,7 @@ export const WorkList = () => {
   useEffect(() => {
     import("../../data/work.js")
       .then(({ work }) => setWorkItems(work))
-      .catch(console.error);
+      .catch(() => window.location.assign("https://github.com/suit0r"));
 
     return () => setWorkItems([]);
   }, []);

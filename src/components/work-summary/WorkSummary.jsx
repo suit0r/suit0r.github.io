@@ -2,7 +2,6 @@ import { Item } from "$/components/timeline";
 import { NarrowText, Spacer } from "$/components/content";
 import { MainLink } from "$/components/link";
 import { ActionBar } from "$/components/action-bar";
-import { AboutCompany } from "$/components/about-company";
 import { makeClassName } from "$/helpers";
 
 import { JobTitle } from "./JobTitle";
@@ -43,14 +42,6 @@ export const WorkSummary = (props) => {
         </Spacer>
         {summary.actions && <ActionBar actions={summary.actions} />}
         <Responsibilities list={summary.responsibilities} />
-        {summary.aboutEmployer && (
-          <AboutCompany
-            company={summary.employer}
-            description={summary.aboutEmployer}
-          >
-            <div>icon and address</div>
-          </AboutCompany>
-        )}
       </Spacer>
     </Item>
   );
