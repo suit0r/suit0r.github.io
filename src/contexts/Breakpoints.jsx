@@ -1,10 +1,4 @@
-import {
-  useEffect,
-  useState,
-  useCallback,
-  createContext,
-  useContext,
-} from "react";
+import { useEffect, useState, createContext, useContext } from "react";
 
 import {
   MOBILE_SCREEN,
@@ -16,72 +10,62 @@ import {
 
 const BreakpointsContext = createContext();
 
-export const BreakpointsProvider = (props) => {
-  const generateBreakpoint = useCallback(() => {
-    const makeBPquery = (min, max) =>
-      [min, max]
-        .map((val, ind) =>
-          val
-            ? ind
-              ? `(max-width: ${val}px)`
-              : `(min-width: ${val + 1}px)`
-            : ``
-        )
-        .filter(Boolean)
-        .join(" and ");
+const makeBPquery = (min, max) =>
+  `(min-width: ${min + 1}px) and (max-width: ${max}px)`;
 
-    const breakpoints = [
-      [0, MOBILE_SCREEN, "mobile"],
-      [MOBILE_SCREEN + 1, SMALL_SCREEN, "small"],
-      [SMALL_SCREEN + 1, MEDIUM_SCREEN, "medium"],
-      [MEDIUM_SCREEN + 1, LARGE_SCREEN, "large"],
-      [LARGE_SCREEN + 1, LARGEST_SCREEN, "largest"],
-      [LARGEST_SCREEN + 1, 0, "desktop"],
-    ].reduce(
-      (obj, value) => {
-        const mql = window.matchMedia(makeBPquery(...value));
+const generateBreakpoint = () => {
+  const { MAX_SAFE_INTEGER } = Number;
 
-        obj[value[2]] = mql.matches;
+  const breakpoints = [
+    [0, MOBILE_SCREEN, "mobile"],
+    [MOBILE_SCREEN, SMALL_SCREEN, "small"],
+    [SMALL_SCREEN, MEDIUM_SCREEN, "medium"],
+    [MEDIUM_SCREEN, LARGE_SCREEN, "large"],
+    [LARGE_SCREEN, LARGEST_SCREEN, "largest"],
+    [LARGEST_SCREEN, MAX_SAFE_INTEGER, "desktop"],
+  ].reduce(
+    (obj, value) => {
+      const mql = window.matchMedia(makeBPquery(...value));
 
-        if (mql.matches) {
-          obj.breakpoint = value[2];
-          obj.mql = mql;
-        }
+      obj[value[2]] = mql.matches;
 
-        return obj;
-      },
-      {
-        breakpoints: [
-          "mobile",
-          "small",
-          "medium",
-          "large",
-          "largest",
-          "desktop",
-        ],
-        sizes: [
-          MOBILE_SCREEN,
-          SMALL_SCREEN,
-          MEDIUM_SCREEN,
-          LARGE_SCREEN,
-          LARGEST_SCREEN,
-          Infinity,
-        ],
+      if (mql.matches) {
+        obj.breakpoint = value[2];
+        obj.mql = mql;
       }
-    );
 
-    return breakpoints;
-  }, []);
+      return obj;
+    },
+    {
+      breakpoints: ["mobile", "small", "medium", "large", "largest", "desktop"],
+      sizes: [
+        MOBILE_SCREEN,
+        SMALL_SCREEN,
+        MEDIUM_SCREEN,
+        LARGE_SCREEN,
+        LARGEST_SCREEN,
+        MAX_SAFE_INTEGER,
+      ],
+      breakpoint: undefined,
+      mql: undefined,
+    }
+  );
 
+  return breakpoints;
+};
+
+export const BreakpointsProvider = (props) => {
   const [breakpoints, setBreakpoints] = useState(generateBreakpoint());
 
   useEffect(() => {
-    const listener = () => setBreakpoints(generateBreakpoint());
+    if (breakpoints.mql) {
+      const listener = () => setBreakpoints(generateBreakpoint());
 
-    breakpoints.mql.addEventListener("change", listener);
+      breakpoints.mql.addEventListener("change", listener);
 
-    return () => breakpoints.mql.removeEventListener("change", listener);
-  }, [breakpoints.mql, generateBreakpoint]);
+      return () => breakpoints.mql.removeEventListener("change", listener);
+    }
+  }, [breakpoints.mql]);
 
   return (
     <BreakpointsContext.Provider value={{ ...breakpoints }}>

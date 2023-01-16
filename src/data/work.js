@@ -1,9 +1,9 @@
-import {
-  ABOUT_ACTION,
-  PACKAGE_ACTION,
-  COMPETITORS_ACTION,
-  PREVIEW_ACTION,
-} from "../constants";
+// import {
+//   ABOUT_ACTION,
+//   PACKAGE_ACTION,
+//   COMPETITORS_ACTION,
+//   PREVIEW_ACTION,
+// } from "../constants";
 
 // TODO: this needs firebase.json packages, hotbar items, other demos
 
@@ -41,7 +41,7 @@ export const work = [
       "Brainstorming feature releases and architectural initiatives",
       "Contributing creative material to the marketing and product teams",
     ],
-    actions: [ABOUT_ACTION, PREVIEW_ACTION, PACKAGE_ACTION, COMPETITORS_ACTION],
+    // actions: [ABOUT_ACTION, PREVIEW_ACTION, PACKAGE_ACTION, COMPETITORS_ACTION],
   },
   {
     startDate: "July 2021",
@@ -60,7 +60,7 @@ export const work = [
       "Created new and fully accessible React components",
       "Consulted on the roadmap to implement accessibility best practices",
     ],
-    actions: [ABOUT_ACTION, PREVIEW_ACTION],
+    // actions: [ABOUT_ACTION, PREVIEW_ACTION],
   },
   {
     startDate: "September 2018",
@@ -79,7 +79,7 @@ export const work = [
       "Coordinated with a Laravel backend to submit mortgage form data",
       "Deployed a websockets service for live updates",
     ],
-    actions: [PREVIEW_ACTION],
+    // actions: [PREVIEW_ACTION],
   },
   {
     startDate: "October 2017",
@@ -98,7 +98,7 @@ export const work = [
       "Participated in product reviews for our partners' designs and prototypes",
       "Mentored colleagues on industry best-practices, technology trends, and web accessibility",
     ],
-    actions: [ABOUT_ACTION, PREVIEW_ACTION, COMPETITORS_ACTION],
+    // actions: [ABOUT_ACTION, PREVIEW_ACTION, COMPETITORS_ACTION],
   },
   {
     startDate: "April 2016",
@@ -135,7 +135,7 @@ export const work = [
       "Coordinated email and print communications",
       "Liaised with industry partners as well as our membership",
     ],
-    actions: [ABOUT_ACTION, PREVIEW_ACTION],
+    // actions: [ABOUT_ACTION, PREVIEW_ACTION],
   },
   {
     startDate: "August 2014",
