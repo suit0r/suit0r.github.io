@@ -7,21 +7,23 @@
   border-radius: $brad;
   padding: $pad18;
   box-shadow: $low;
-  right: -107px;
+  width: calc(276px - $pad18 * 2);
+  right: -50%;
   top: 0;
 
   h4 {
     margin-bottom: $pad12;
   }
 
-  h4,
-  p {
-    width: 214px;
-  }
-
   &__footer {
     border-top: 1px solid $pale;
     padding-top: $pad12;
     margin-top: $pad12;
+  }
+
+  img {
+    margin-right: $pad12;
+    height: 26px;
+    width: auto;
   }
 }

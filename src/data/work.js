@@ -1,9 +1,17 @@
-// import {
-//   ABOUT_ACTION,
-//   PACKAGE_ACTION,
-//   COMPETITORS_ACTION,
-//   PREVIEW_ACTION,
-// } from "../constants";
+import {
+  ABOUT_ACTION,
+  PACKAGE_ACTION,
+  COMPETITORS_ACTION,
+  PREVIEW_ACTION,
+} from "../constants";
+
+import nobul from "../logos/nobul.png";
+import cfib from "../logos/cfib.png";
+import girafo from "../logos/girafo.gif";
+import keypath from "../logos/keypath.png";
+import freelance from "../logos/freelance.png";
+import arido from "../logos/arido.png";
+import care from "../logos/care.png";
 
 // TODO: this needs firebase.json packages, hotbar items, other demos
 
@@ -11,10 +19,19 @@ export const work = [
   {
     startDate: "October 2019",
     endDate: "Current",
-    employer: "Nobul",
-    employerWebsite: "https://nobul.com",
-    aboutEmployer:
-      "An agent marketplace focused on revolutionizing real estate to deliver value and transparency to the consumer",
+    employer: {
+      name: "Nobul",
+      website: "https://nobul.com",
+      logo: nobul,
+      about:
+        "An agent marketplace focused on revolutionizing real estate to deliver value and transparency to the consumer",
+      address: {
+        street: "170 King St. West",
+        city: "Toronto",
+        region: "Ontario",
+        country: "Canada",
+      },
+    },
     title: "Senior Front-end Dev, Team Lead",
     techStack: ["React", "Node", "Postgres", "Firebase", "GCP"],
     responsibilities: [
@@ -25,50 +42,65 @@ export const work = [
       "Maximizing user-friendly operation at scale",
       "Implementing resilient version control practices",
       "Deploying Websockets and push notifications systems",
-      "Implement real-time bug reporting platform for various departments",
+      "Implemented real-time bug tracking for various departments",
       "Building internal dashboard with real-time communication",
       "Optimizing and safeguarding company asset delivery",
-      "Crafting email campaigns optimized for preserving high IP reputation",
+      "Crafting email campaigns which improve our IP reputation",
       "Enforcing accessibility and SEO best practices",
-      "Managing cloud infrastructure and networking assets and services",
+      "Managing cloud infrastructure services",
       "Extending the design system for rapid prototyping and scaling",
-      "Liaising with the upper management to implement the next generation of the app",
       "Integrating third-party tools and services at scale",
       "Mediating code reviews and team-building exercises",
       "Preserving a consistent release schedule in an agile environment",
-      "Nurturing a healthy, efficient and resilient work environment",
+      "Nurturing a healthy, efficient, and resilient work environment",
       "Hiring talent for junior and senior technical positions",
       "Brainstorming feature releases and architectural initiatives",
-      "Contributing creative material to the marketing and product teams",
+      "Contributing creatives to the marketing and product teams",
     ],
-    // actions: [ABOUT_ACTION, PREVIEW_ACTION, PACKAGE_ACTION, COMPETITORS_ACTION],
+    actions: [
+      // { name: ABOUT_ACTION, dataKey: "employer" },
+      ABOUT_ACTION,
+      PACKAGE_ACTION,
+      COMPETITORS_ACTION,
+    ],
   },
   {
     startDate: "July 2021",
     endDate: "August 2021",
-    employer: "CFIB",
-    employerWebsite: "https://www.cfib-fcei.ca/en/",
-    aboutEmployer:
-      "Canadian Finance Insurance Bureau is an association dedicated to helping consumers find the best businesses",
+    employer: {
+      name: "CFIB",
+      website: "https://www.cfib-fcei.ca/en/",
+      logo: cfib,
+      about:
+        "Canadian Finance Insurance Bureau is an association dedicated to helping consumers find the best businesses",
+      address: {
+        street: "401-4141 Younge St.",
+        city: "North York",
+        region: "Ontario",
+        country: "Canada",
+      },
+    },
     title: "Front-end Contractor",
     techStack: ["React", "Nextjs", "Redis", "Azure"],
     responsibilities: [
       "Audited CFIB website to meet AA WCAG requirements",
-      "Updated legacy pages with missing accessibility requirements",
-      "Retrofitted components to meet AA standards",
-      "Refactored live Next.js pages to improve stability and accessibility",
-      "Created new and fully accessible React components",
-      "Consulted on the roadmap to implement accessibility best practices",
+      "Retrofitted pages and components to meet AA standards",
+      "Improved stability and accessibility of live Next.js pages",
+      "Created new fully accessible React components",
+      "Consulted on accessibility best-practices roadmap",
     ],
-    // actions: [ABOUT_ACTION, PREVIEW_ACTION],
+    actions: [ABOUT_ACTION, PACKAGE_ACTION],
   },
   {
     startDate: "September 2018",
     endDate: "February 2019",
-    employer: "Girafo",
-    employerWebsite: "",
-    aboutEmployer:
-      "Girafo was a small, Canadian mortgage lender who wanted to simplify mortgage applications with a fully dynamic web form",
+    employer: {
+      name: "Girafo",
+      employerWebsite: "",
+      logo: girafo,
+      about:
+        "Girafo was a small, Canadian mortgage lender who wanted to simplify mortgage applications with a fully dynamic web form",
+    },
     title: "Front-end Contractor",
     techStack: ["Vue", "Laravel", "MySQL", "Digital Ocean"],
     responsibilities: [
@@ -84,66 +116,96 @@ export const work = [
   {
     startDate: "October 2017",
     endDate: "February 2019",
-    employer: "Keypath Education",
-    employerWebsite: "https://keypathedu.com/",
-    aboutEmployer:
-      "Keypath Education facilitates online course application and distribution for premiere post-secondary institutions around the world",
+    employer: {
+      name: "Keypath Education",
+      website: "https://keypathedu.com/",
+      logo: keypath,
+      about:
+        "Keypath Education facilitates online course application and distribution for premiere post-secondary institutions around the world",
+      address: {
+        street: "370 King St. West",
+        city: "Toronto",
+        region: "Ontario",
+        country: "Canada",
+      },
+    },
     title: "Web Developer",
     techStack: ["jQuery", "React", "Vue", "MySQL", "University Servers"],
     responsibilities: [
       "Built course pages and interactive content for universities",
-      "Customized Learning Management Systems to handle new features and layouts",
-      "Built testing tools to facilitate streamlined course development",
-      "Contributed to project management and course development strategies",
-      "Participated in product reviews for our partners' designs and prototypes",
-      "Mentored colleagues on industry best-practices, technology trends, and web accessibility",
+      "Fully customized popular Learning Management Systems",
+      "Built testing tools to streamline course development",
+      "Contributed to course development strategies",
+      "Participated in our partners' design reviews",
+      "Mentored colleagues on industry best-practices",
     ],
-    // actions: [ABOUT_ACTION, PREVIEW_ACTION, COMPETITORS_ACTION],
+    actions: [ABOUT_ACTION, PREVIEW_ACTION, COMPETITORS_ACTION],
   },
   {
     startDate: "April 2016",
     endDate: "October 2017",
-    employer: "Freelancer",
-    employerWebsite: "",
+    employer: {
+      name: "Freelancer",
+      website: "",
+      logo: freelance,
+    },
     title: "Web Developer and UX/UI Designer",
     techStack: ["jQuery", "Angular", "Vue", "MySQL", "MongoDb", "Firebase"],
     responsibilities: [
-      "Prototyped, developed, and maintained custom websites and content",
-      "Consulted on industry trends, best-practices, and monetization prospects",
-      "Wrote high quality, SEO-optimized content ",
+      "Prototyped, developed, and maintained custom websites",
+      "Consulted on industry trends and best-practices",
+      "Wrote high quality, SEO-optimized content",
       "Designed bespoke experiences based on the client's vision",
-      "Translated industry lingo the client to clarify requirements and limitations",
+      "Translated industry lingo to clients to promote transparency",
     ],
   },
   {
     startDate: "November 2015",
     endDate: "October 2017",
-    employer: "ARIDO",
-    employerWebsite: "https://arido.ca/",
-    aboutEmployer:
-      "Association for Registered Interior Designers of Ontario is tasked with the regulatory enforcement and enrollment of Interior Designers in the province",
+    employer: {
+      name: "ARIDO",
+      website: "https://arido.ca/",
+      logo: arido,
+      about:
+        "Association for Registered Interior Designers of Ontario is tasked with the regulatory enforcement and enrollment of Interior Designers in the province",
+      address: {
+        street: "C536-43 Hanna Ave.",
+        city: "Toronto",
+        region: "Ontario",
+        country: "Canada",
+      },
+    },
     title: "Communications Coordinator",
     techStack: ["JavaScript", "Wordpress"],
     responsibilities: [
-      "Leveraged open-source web technologies to save company resources",
-      "Collected and routed form data to form platforms",
-      "Created microsites for various events",
+      "Leveraged open-source technologies to save company resources",
+      "Collected and routed user data to various databases",
+      "Created microsites for organization events",
       "Built a lightweight contract editing web app",
-      "Set up an awards submission platform and payment processing unit",
+      "Set up an awards submission platform and payment processing",
       "Managed and curated website content",
       "Updated app and website interfaces for digital and print content",
       "Coordinated email and print communications",
       "Liaised with industry partners as well as our membership",
     ],
-    // actions: [ABOUT_ACTION, PREVIEW_ACTION],
+    actions: [ABOUT_ACTION],
   },
   {
     startDate: "August 2014",
     endDate: "August 2015",
-    employer: "CARE Centre for IENs",
-    employerWebsite: "https://care4nurses.org/",
-    aboutEmployer:
-      "CARE Center is a non-profit organization helping newly immigrated nurses update their skills to transition their practice in Ontario",
+    employer: {
+      name: "CARE Centre for IENs",
+      website: "https://care4nurses.org/",
+      logo: care,
+      about:
+        "CARE Center is a non-profit organization helping newly immigrated nurses update their skills to transition their practice in Ontario",
+      address: {
+        street: "1901-365 Bloor St. East",
+        city: "Toronto",
+        region: "Ontario",
+        country: "Canada",
+      },
+    },
     title: "Communications Associate",
     techStack: ["JavaScript", "Wordpress"],
     responsibilities: [
@@ -154,5 +216,6 @@ export const work = [
       "Ran professional development and computer literacy seminars",
       "Set up tradeshows and conferences",
     ],
+    actions: [ABOUT_ACTION],
   },
 ];

@@ -11,7 +11,7 @@ import {
 const BreakpointsContext = createContext();
 
 const makeBPquery = (min, max) =>
-  `(min-width: ${min + 1}px) and (max-width: ${max}px)`;
+  `(min-width: ${min}px) and (max-width: ${max}px)`;
 
 const generateBreakpoint = () => {
   const { MAX_SAFE_INTEGER } = Number;
@@ -24,13 +24,17 @@ const generateBreakpoint = () => {
     [LARGE_SCREEN, LARGEST_SCREEN, "largest"],
     [LARGEST_SCREEN, MAX_SAFE_INTEGER, "desktop"],
   ].reduce(
-    (obj, value) => {
-      const mql = window.matchMedia(makeBPquery(...value));
+    (obj, value, ind) => {
+      const [minWidth, maxWidth, breakpoint] = value;
+      const mql = window.matchMedia(makeBPquery(minWidth + 1, maxWidth));
 
       obj[value[2]] = mql.matches;
 
       if (mql.matches) {
-        obj.breakpoint = value[2];
+        obj.breakpoint = breakpoint;
+        obj.minWidth = minWidth + 1;
+        obj.maxWidth = maxWidth;
+        obj.smallish = ind < 2;
         obj.mql = mql;
       }
 
@@ -46,8 +50,7 @@ const generateBreakpoint = () => {
         LARGEST_SCREEN,
         MAX_SAFE_INTEGER,
       ],
-      breakpoint: undefined,
-      mql: undefined,
+      width: window.innerWidth,
     }
   );
 

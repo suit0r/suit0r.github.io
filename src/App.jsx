@@ -10,12 +10,14 @@ import { makeClassName } from "$/helpers";
 import styles from "./App.module.scss";
 
 function App() {
-  const { mobile } = useBreakpointsContext();
+  const { smallish } = useBreakpointsContext();
 
   return (
-    <div className={makeClassName(styles.app, [styles.app__mobile, mobile])}>
+    <div
+      className={makeClassName(styles.app, [styles.app__smallish, smallish])}
+    >
       <Main>
-        {!mobile && <SideLine />}
+        {!smallish && <SideLine />}
         <Timeline>
           <AboutMe />
           <WorkList />

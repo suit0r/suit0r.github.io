@@ -1,7 +1,8 @@
 import { Item } from "$/components/timeline";
 import { NarrowText, Spacer } from "$/components/content";
 import { MainLink } from "$/components/link";
-import { ActionBar } from "$/components/action-bar";
+import { ActionBar, ActionItems } from "$/components/action-bar";
+
 import { makeClassName } from "$/helpers";
 
 import { JobTitle } from "./JobTitle";
@@ -25,12 +26,12 @@ export const WorkSummary = (props) => {
         <NarrowText className={styles.work}>
           <Spacer>
             <MainLink
-              iconVisible={summary.employerWebsite}
+              iconVisible={summary.employer.website}
               className={makeClassName("h1", "seamless", styles["title-link"])}
               type="external"
-              href={summary.employerWebsite}
+              href={summary.employer.website}
             >
-              {summary.employer}
+              {summary.employer.name}
             </MainLink>
           </Spacer>
         </NarrowText>
@@ -41,7 +42,10 @@ export const WorkSummary = (props) => {
           <StackTitle stack={summary.techStack} />
         </Spacer>
         {summary.actions && <ActionBar actions={summary.actions} />}
-        <Responsibilities list={summary.responsibilities} />
+        <div className="flex justify__between">
+          <Responsibilities list={summary.responsibilities} />
+          <ActionItems employer={summary.employer} />
+        </div>
       </Spacer>
     </Item>
   );

@@ -8,12 +8,16 @@ export const WorkList = () => {
   useEffect(() => {
     import("../../data/work.js")
       .then(({ work }) => setWorkItems(work))
-      .catch(() => window.location.assign("https://github.com/suit0r"));
+      .catch((error) =>
+        import.meta.env.PROD
+          ? window.location.assign("https://github.com/suit0r")
+          : console.error(error)
+      );
 
     return () => setWorkItems([]);
   }, []);
 
   return workItems.map((workItem) => (
-    <WorkSummary key={workItem.employer} summary={workItem} />
+    <WorkSummary key={workItem.employer.name} summary={workItem} />
   ));
 };
