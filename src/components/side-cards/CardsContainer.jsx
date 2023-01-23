@@ -10,6 +10,7 @@ export const CardsContainer = (props) => {
     <div
       className={makeClassName(
         "flex",
+        "wrap",
         "align__start",
         "relative",
         styles["cards-container"],
