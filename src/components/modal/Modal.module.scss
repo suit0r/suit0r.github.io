@@ -57,10 +57,11 @@
 }
 
 .backdrop {
-  background-color: rgba($paper, 0.5);
-  transition: backdrop-filter $fast;
+  background-color: rgba($dark, 0.5);
+  transition: backdrop-filter $fast, background-color $fast;
 
   &.blurred {
+    background-color: rgba($black, 0.5);
     backdrop-filter: blur($pad6);
   }
 }

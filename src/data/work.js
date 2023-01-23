@@ -1,9 +1,4 @@
-import {
-  ABOUT_ACTION,
-  PACKAGE_ACTION,
-  COMPETITORS_ACTION,
-  PREVIEW_ACTION,
-} from "../constants";
+import { PACKAGE_ACTION, PREVIEW_ACTION } from "../constants";
 
 import nobul from "../logos/nobul.png";
 import cfib from "../logos/cfib.png";
@@ -13,7 +8,7 @@ import freelance from "../logos/freelance.png";
 import arido from "../logos/arido.png";
 import care from "../logos/care.png";
 
-// TODO: this needs firebase.json packages, hotbar items, other demos
+// TODO: set up package.json and preview actions
 
 export const work = [
   {
@@ -31,6 +26,20 @@ export const work = [
         region: "Ontario",
         country: "Canada",
       },
+      competitors: [
+        {
+          name: "Ideal Agent",
+          website: "https://idealagent.com/",
+        },
+        {
+          name: "UpNest",
+          website: "https://upnest.com/",
+        },
+        {
+          name: "HomeLight",
+          website: "https://homelight.com/",
+        },
+      ],
     },
     title: "Senior Front-end Dev, Team Lead",
     techStack: ["React", "Node", "Postgres", "Firebase", "GCP"],
@@ -57,12 +66,7 @@ export const work = [
       "Brainstorming feature releases and architectural initiatives",
       "Contributing creatives to the marketing and product teams",
     ],
-    actions: [
-      // { name: ABOUT_ACTION, dataKey: "employer" },
-      ABOUT_ACTION,
-      PACKAGE_ACTION,
-      COMPETITORS_ACTION,
-    ],
+    actions: [PACKAGE_ACTION],
   },
   {
     startDate: "July 2021",
@@ -89,7 +93,7 @@ export const work = [
       "Created new fully accessible React components",
       "Consulted on accessibility best-practices roadmap",
     ],
-    actions: [ABOUT_ACTION, PACKAGE_ACTION],
+    actions: [PACKAGE_ACTION],
   },
   {
     startDate: "September 2018",
@@ -99,7 +103,7 @@ export const work = [
       employerWebsite: "",
       logo: girafo,
       about:
-        "Girafo was a small, Canadian mortgage lender who wanted to simplify mortgage applications with a fully dynamic web form",
+        "Girafo was a small, Canadian mortgage lender who wanted to simplify mortgage applications",
     },
     title: "Front-end Contractor",
     techStack: ["Vue", "Laravel", "MySQL", "Digital Ocean"],
@@ -121,25 +125,42 @@ export const work = [
       website: "https://keypathedu.com/",
       logo: keypath,
       about:
-        "Keypath Education facilitates online course application and distribution for premiere post-secondary institutions around the world",
+        "Keypath Education facilitates online course application and distribution for premiere post-secondary institutions",
       address: {
         street: "370 King St. West",
         city: "Toronto",
         region: "Ontario",
         country: "Canada",
       },
+      competitors: [
+        {
+          name: "Pearson",
+          website: "https://pearson.com/",
+        },
+        {
+          name: "Wiley Education Services",
+          website: "https://universityservices.wiley.com/",
+        },
+        {
+          name: "Anthology",
+          website: "https://www.anthology.com/",
+        },
+      ],
     },
     title: "Web Developer",
     techStack: ["jQuery", "React", "Vue", "MySQL", "University Servers"],
     responsibilities: [
       "Built course pages and interactive content for universities",
+      "Translated lectures into interactive learning experiences",
+      "Liased with professors to create bespoke courseware",
+      "Reimagined static quizes in fun and interactive ways",
       "Fully customized popular Learning Management Systems",
       "Built testing tools to streamline course development",
       "Contributed to course development strategies",
       "Participated in our partners' design reviews",
       "Mentored colleagues on industry best-practices",
     ],
-    actions: [ABOUT_ACTION, PREVIEW_ACTION, COMPETITORS_ACTION],
+    actions: [PREVIEW_ACTION],
   },
   {
     startDate: "April 2016",
@@ -167,7 +188,7 @@ export const work = [
       website: "https://arido.ca/",
       logo: arido,
       about:
-        "Association for Registered Interior Designers of Ontario is tasked with the regulatory enforcement and enrollment of Interior Designers in the province",
+        "Association for Registered Interior Designers of Ontario is tasked with regulating and promoting the profession in the province",
       address: {
         street: "C536-43 Hanna Ave.",
         city: "Toronto",
@@ -188,7 +209,6 @@ export const work = [
       "Coordinated email and print communications",
       "Liaised with industry partners as well as our membership",
     ],
-    actions: [ABOUT_ACTION],
   },
   {
     startDate: "August 2014",
@@ -198,7 +218,7 @@ export const work = [
       website: "https://care4nurses.org/",
       logo: care,
       about:
-        "CARE Center is a non-profit organization helping newly immigrated nurses update their skills to transition their practice in Ontario",
+        "CARE Center is a non-profit organization helping internationally trained nurses transition their practice in Ontario",
       address: {
         street: "1901-365 Bloor St. East",
         city: "Toronto",
@@ -216,6 +236,5 @@ export const work = [
       "Ran professional development and computer literacy seminars",
       "Set up tradeshows and conferences",
     ],
-    actions: [ABOUT_ACTION],
   },
 ];

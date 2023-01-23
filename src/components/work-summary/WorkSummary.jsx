@@ -1,13 +1,18 @@
 import { Item } from "$/components/timeline";
 import { NarrowText, Spacer } from "$/components/content";
 import { MainLink } from "$/components/link";
-import { ActionBar, ActionItems } from "$/components/action-bar";
+import {
+  CardsContainer,
+  AboutCompanyCard,
+  CompetitorsCard,
+} from "$/components/side-cards";
 
 import { makeClassName } from "$/helpers";
 
 import { JobTitle } from "./JobTitle";
 import { StackTitle } from "./StackTitle";
 import { Responsibilities } from "./Responsibilities";
+import { SideCardFlex } from "./SideCardFlex";
 
 import styles from "./WorkSummary.module.scss";
 
@@ -36,16 +41,22 @@ export const WorkSummary = (props) => {
           </Spacer>
         </NarrowText>
         <Spacer amount={12}>
-          <JobTitle>Senior Front-end Dev, Team Lead</JobTitle>
+          <JobTitle>{summary.title}</JobTitle>
         </Spacer>
         <Spacer amount={12}>
           <StackTitle stack={summary.techStack} />
         </Spacer>
-        {summary.actions && <ActionBar actions={summary.actions} />}
-        <div className="flex justify__between">
+        <SideCardFlex>
           <Responsibilities list={summary.responsibilities} />
-          <ActionItems employer={summary.employer} />
-        </div>
+          <CardsContainer>
+            {summary.employer.about && (
+              <AboutCompanyCard employer={summary.employer} />
+            )}
+            {summary.employer.competitors && (
+              <CompetitorsCard employer={summary.employer} />
+            )}
+          </CardsContainer>
+        </SideCardFlex>
       </Spacer>
     </Item>
   );

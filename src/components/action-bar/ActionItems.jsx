@@ -1,9 +1,11 @@
-import { AboutCompany } from "$/components/about-company";
+import { AboutCompanyCard } from "$/components/side-cards";
+
+import styles from "./ActionBar.module.scss";
 
 export const ActionItems = (props) => (
-  <div className="relative">
+  <div className={`relative ${styles["action-items"]}`}>
     {props.employer.about && (
-      <AboutCompany
+      <AboutCompanyCard
         company={props.employer.name}
         description={props.employer.about}
       >
@@ -25,7 +27,7 @@ export const ActionItems = (props) => (
             <span className="tiny-text">No longer in business</span>
           )}
         </div>
-      </AboutCompany>
+      </AboutCompanyCard>
     )}
   </div>
 );

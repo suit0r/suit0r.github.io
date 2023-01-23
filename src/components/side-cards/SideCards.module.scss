@@ -1,18 +1,14 @@
 @import "$/scss/vars";
 
-// TODO: styling to match figma
-
-.about-company {
+.side-card {
   background-color: $paper;
   border-radius: $brad;
   padding: $pad18;
   box-shadow: $low;
   width: calc(276px - $pad18 * 2);
-  right: -50%;
-  top: 0;
 
   h4 {
-    margin-bottom: $pad12;
+    margin-bottom: $pad6;
   }
 
   &__footer {
@@ -25,5 +21,25 @@
     margin-right: $pad12;
     height: 26px;
     width: auto;
+  }
+}
+
+.cards-container {
+  margin-top: $pad24;
+
+  &__shift-right {
+    transform: translateX(112px);
+  }
+
+  &:global(.row) {
+    > :nth-child(n + 2) {
+      margin-left: $pad24;
+    }
+  }
+
+  &:global(.column) {
+    > :nth-child(n + 2) {
+      margin-top: $pad24;
+    }
   }
 }
