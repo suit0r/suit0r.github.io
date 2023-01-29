@@ -43,3 +43,28 @@
     }
   }
 }
+
+.competitors-card-item {
+  margin-bottom: $pad6;
+
+  &__link {
+    font-weight: 700;
+
+    :global(.link-icon) {
+      height: 14px;
+      width: 14px;
+    }
+
+    + p {
+      color: $medium;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-right: $pad12;
+  }
+}

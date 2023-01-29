@@ -30,14 +30,21 @@ export const work = [
         {
           name: "Ideal Agent",
           website: "https://idealagent.com/",
+          title: "Top 1% Local Real Estate Agents - Ideal Agent",
+          favicon: "https://idealagent.com/favicon.ico",
         },
         {
           name: "UpNest",
           website: "https://upnest.com/",
+          title: "Compare Real Estate Agents | Agents Compete For You!",
+          favicon: "https://www.lt6p.com/re/img/upnest.ico",
         },
         {
           name: "HomeLight",
           website: "https://homelight.com/",
+          title: "HomeLight: Buy, Sell, or Buy Before You Sell Your Home",
+          favicon:
+            "https://d1xt9s86fx9r45.cloudfront.net/assets/hl-production/assets/favicon-32x32-eea77ac60b2a12d93bd872db8e83de9ee79eb84b4c84a6c554ff785423989ac7.png",
         },
       ],
     },
@@ -135,15 +142,24 @@ export const work = [
       competitors: [
         {
           name: "Pearson",
-          website: "https://pearson.com/",
+          website: "https://www.pearson.com/en-ca.html",
+          title: "Create new possibilities with Pearson. Start learning today.",
+          favicon:
+            "https://www.pearson.com/conf/pearson/settings/wcm/templates/global-store-en-ca-template/favicon-on-light.ico",
         },
         {
           name: "Wiley Education Services",
           website: "https://universityservices.wiley.com/",
+          title:
+            "Higher Ed Consulting, Services & Solutions | Wiley University Services",
+          favicon:
+            "https://universityservices.wiley.com/wp-content/themes/wiley-wes/images/icons/favicon.ico",
         },
         {
           name: "Anthology",
           website: "https://www.anthology.com/",
+          title: "Educational Technology Services | Anthology | North America",
+          favicon: "https://www.anthology.com/favicon.ico",
         },
       ],
     },
