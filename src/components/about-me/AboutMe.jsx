@@ -3,22 +3,29 @@ import { Columns } from "$/components/content";
 
 import { useToggleContext } from "$/contexts";
 import { useBreakpointsContext } from "$/contexts";
+import { makeClassName } from "$/helpers";
 
 import { Address } from "./Address";
 import { PhotoBlurb } from "./PhotoBlurb";
 import { School } from "./School";
 import { OnlineSchools } from "./OnlineSchools";
 
+import styles from "./AboutMe.module.scss";
+
 import atSign from "$/svg/icons/at-sign.svg";
 
-// TODO: writeup, image, online institutions
+// TODO: online institutions
 export const AboutMe = () => {
   const { toggleGlobally } = useToggleContext();
-  const { mobile } = useBreakpointsContext();
+  const { smallish } = useBreakpointsContext();
 
   return (
     <Item h={1} heading="Irakli Tsaishvili" icon={atSign}>
-      <Columns amount={mobile ? 1 : 2} gap={mobile ? 24 : 48}>
+      <Columns
+        gap={smallish ? 24 : 96}
+        symmetric={smallish}
+        className={makeClassName([styles["about-me-columns"], !smallish])}
+      >
         <div>
           <Address />
           <PhotoBlurb />
@@ -42,7 +49,3 @@ export const AboutMe = () => {
     </Item>
   );
 };
-
-export * from "./Address";
-export * from "./PhotoBlurb";
-export * from "./School";

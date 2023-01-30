@@ -13,6 +13,7 @@
   border: $border solid $blueblack;
   padding: $pad18;
   left: -($pad48 + $pad18 + $border);
+  user-select: none;
 
   object {
     top: 50%;

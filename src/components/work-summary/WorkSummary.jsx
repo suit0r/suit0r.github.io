@@ -1,3 +1,4 @@
+import { useBreakpointsContext } from "$/contexts";
 import { Item } from "$/components/timeline";
 import { NarrowText, Spacer } from "$/components/content";
 import { MainLink } from "$/components/link";
@@ -25,6 +26,8 @@ import calendar from "$/svg/icons/calendar.svg";
 export const WorkSummary = (props) => {
   const { summary } = props;
 
+  const { smallish } = useBreakpointsContext();
+
   return (
     <Item heading={`${summary.startDate} - ${summary.endDate}`} icon={calendar}>
       <Spacer amount={24}>
@@ -44,7 +47,7 @@ export const WorkSummary = (props) => {
           <JobTitle>{summary.title}</JobTitle>
         </Spacer>
         <Spacer amount={12}>
-          <StackTitle stack={summary.techStack} />
+          <StackTitle smallish={smallish} stack={summary.techStack} />
         </Spacer>
         <SideCardFlex>
           <Responsibilities list={summary.responsibilities} />

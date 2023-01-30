@@ -7,7 +7,9 @@ export const School = (props) => (
     {props.school && (
       <dl className={styles.school} aria-label="School and program info">
         <dt>
-          <span className="h3">{props.school}</span> <span>({props.year})</span>
+          <span className="h3">{props.school}</span>
+          {props.stream && <span>{props.stream}</span>}
+          <span>({props.year})</span>
         </dt>
         <Spacer as="dd" amount={6}>
           {[].concat(props.degrees).join(props.joiner || " | ")}

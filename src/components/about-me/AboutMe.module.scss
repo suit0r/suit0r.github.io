@@ -4,7 +4,6 @@
   img {
     border-radius: $brad;
     margin-right: $pad12;
-    margin-bottom: $pad9;
   }
 
   p {
@@ -17,9 +16,14 @@
 
   dd {
     margin-left: 0;
+    white-space: pre-wrap;
   }
 
   span + span {
     margin-left: $pad6;
   }
+}
+
+.about-me-columns {
+  grid-template-columns: 1fr auto;
 }
