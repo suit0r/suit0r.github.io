@@ -37,7 +37,7 @@ export const work = [
           name: "UpNest",
           website: "https://upnest.com/",
           title: "Compare Real Estate Agents | Agents Compete For You!",
-          favicon: "https://www.lt6p.com/re/img/upnest.ico",
+          favicon: "https://www.lt6p.com/re/img/favicon.ico",
         },
         {
           name: "HomeLight",
