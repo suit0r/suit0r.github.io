@@ -52,6 +52,7 @@ export const work = [
     techStack: ["React", "Node", "Postgres", "Firebase", "GCP"],
     responsibilities: [
       "Transitioned a custom SPA fully to Next.js",
+      "Supporting full SMS integration via Twilio",
       "Updated authentication for the new server-side paradigm",
       "Implementing new server/static rendering for improved SEO",
       "Implementing performant and resilient architecture",
