@@ -38,13 +38,16 @@ export const Modal = (props) => {
               styles[`body__${breakpoint}`]
             )}
             initial={{
-              transform: `translate(-50%, -50%) scale(0)`,
+              transform: `translate(-50%, -50%) scale(0.1)`,
+              opacity: 0.5,
             }}
             animate={{
               transform: `translate(-50%, -50%) scale(1)`,
+              opacity: 1,
             }}
             exit={{
-              transform: `translate(-50%, -50%) scale(0)`,
+              transform: `translate(-50%, -50%) scale(0.1)`,
+              opacity: 0,
             }}
           >
             {props.heading && (
