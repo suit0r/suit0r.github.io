@@ -21,7 +21,7 @@ export const work = [
       about:
         "An agent marketplace focused on revolutionizing real estate to deliver value and transparency to the consumer",
       address: {
-        street: "170 King St. West",
+        street: "130 King St. West",
         city: "Toronto",
         region: "Ontario",
         country: "Canada",
@@ -119,7 +119,6 @@ export const work = [
       "Set up a Vue.js front-end to handle dynamic mortgage applications",
       "Consulted on migrating from a PDF-based application to the web",
       "Leveraged design systems for rapid prototyping and development",
-      "Adapted the design system to meet client branding criteria",
       "Coordinated with a Laravel backend to submit mortgage form data",
       "Deployed a websockets service for live updates",
     ],
@@ -169,8 +168,8 @@ export const work = [
     responsibilities: [
       "Built course pages and interactive content for universities",
       "Translated lectures into interactive learning experiences",
-      "Liased with professors to create bespoke courseware",
-      "Reimagined static quizes in fun and interactive ways",
+      "Liaised with professors to create bespoke courseware",
+      "Reimagined static quizzes in fun and interactive ways",
       "Fully customized popular Learning Management Systems",
       "Built testing tools to streamline course development",
       "Contributed to course development strategies",
