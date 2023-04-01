@@ -3,9 +3,12 @@
 .app {
   min-height: 100vh;
   perspective: 282px;
-  padding-bottom: $pad96;
+  padding-left: $pad48;
+  padding-right: $pad48;
 
-  &__mobile {
+  &__smallish {
     padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

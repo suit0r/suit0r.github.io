@@ -21,6 +21,19 @@
   gap: $pad48;
 }
 
+.text-columns {
+  column-gap: $pad48;
+  column-count: 1;
+
+  &__2 {
+    column-count: 2;
+  }
+
+  &__3 {
+    column-count: 3;
+  }
+}
+
 .spacer {
   margin: $pad 0;
 

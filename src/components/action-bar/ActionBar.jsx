@@ -3,6 +3,7 @@ import { makeClassName } from "$/helpers";
 import styles from "./ActionBar.module.scss";
 
 // TODO: some sort of active visual feedback
+// TODO: bring ActionItems here
 export const ActionBar = (props) => (
   <div className={styles["action-bar"]}>
     <div className={makeClassName("relative", styles.actions)}>

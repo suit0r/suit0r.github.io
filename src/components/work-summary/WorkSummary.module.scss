@@ -3,14 +3,6 @@
 .work {
   color: $blueblack;
 
-  a {
-    color: inherit;
-
-    &:visited {
-      color: inherit;
-    }
-  }
-
   :global(.link-icon__wrap) {
     margin-left: $pad;
   }

@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import { useBreakpointsContext } from "$/contexts";
 import { Modal } from "$/components/modal";
 import { Spacer, Grid } from "$/components/content";
@@ -12,6 +14,14 @@ export const OnlineSchools = (props) => {
   const { breakpoints, breakpoint } = useBreakpointsContext();
   const columns = [1, 1, 1, 2, 2, 2][breakpoints.indexOf(breakpoint)];
 
+  const [education, setEducation] = useState([]);
+
+  useEffect(() => {
+    import("../../data/education").then(({ education }) =>
+      setEducation(education)
+    );
+  }, []);
+
   return (
     <>
       <Spacer amount={6}>
@@ -19,53 +29,19 @@ export const OnlineSchools = (props) => {
           View List
         </Button>
       </Spacer>
-      <Modal heading="Online Institutions and Courses">
+      <Modal heading="Some Noteworthy Courses">
         <Grid columns={columns}>
-          <School
-            spacing={0}
-            school="Various Online Diplomas"
-            year="2012+"
-            degrees={[
-              "JavaScript",
-              "CSS",
-              "HTML",
-              "UX and Web Design",
-              "Algorithms & Data",
-              "Structures",
-              "Software Engineering",
-              "Databases and Data Administration",
-            ]}
-          />
-          <School
-            spacing={0}
-            school="Various Online Diplomas"
-            year="2012+"
-            degrees={[
-              "JavaScript",
-              "CSS",
-              "HTML",
-              "UX and Web Design",
-              "Algorithms & Data",
-              "Structures",
-              "Software Engineering",
-              "Databases and Data Administration",
-            ]}
-          />
-          <School
-            spacing={0}
-            school="Various Online Diplomas"
-            year="2012+"
-            degrees={[
-              "JavaScript",
-              "CSS",
-              "HTML",
-              "UX and Web Design",
-              "Algorithms & Data",
-              "Structures",
-              "Software Engineering",
-              "Databases and Data Administration",
-            ]}
-          />
+          {education.map((platform) => (
+            <School
+              key={platform.institution}
+              spacing={0}
+              year="2012+"
+              joiner={`\n`}
+              school={platform.institution}
+              stream={platform.stream}
+              degrees={platform.courses}
+            />
+          ))}
         </Grid>
       </Modal>
     </>

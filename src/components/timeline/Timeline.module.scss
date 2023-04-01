@@ -13,6 +13,7 @@
   border: $border solid $blueblack;
   padding: $pad18;
   left: -($pad48 + $pad18 + $border);
+  user-select: none;
 
   object {
     top: 50%;
@@ -27,12 +28,4 @@
   left: calc($border / 2 * -1);
   top: 0;
   bottom: 0;
-
-  :global(.circle) {
-    background-color: inherit;
-    height: $pad24;
-    width: $pad24;
-    left: calc($pad24 / 2 * -1);
-    bottom: calc($pad24 / 2 * -1);
-  }
 }

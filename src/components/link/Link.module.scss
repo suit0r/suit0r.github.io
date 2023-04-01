@@ -1,0 +1,11 @@
+@import "$/scss/vars";
+
+.social-link {
+  > * {
+    vertical-align: middle;
+  }
+
+  > b {
+    margin-left: $pad6;
+  }
+}

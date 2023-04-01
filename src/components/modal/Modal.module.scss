@@ -6,22 +6,6 @@
   bottom: 0;
   right: 0;
   left: 0;
-
-  &__toggled-on {
-    transform: scale(1);
-
-    .body {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-
-  &__toggled-off {
-    transform: scale(0);
-
-    .body {
-      transform: translate(-50%, -50%) scale(0);
-    }
-  }
 }
 
 // TODO: set min/max width sizes for all breakpoints
@@ -33,13 +17,10 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform $fast;
 
   &__desktop {
-    min-width: 628px;
-    max-width: 628px;
-    max-height: calc(100vh - $pad24 * 2);
+    width: 628px;
+    max-height: calc(100vh - $pad96 * 2);
   }
 }
 
@@ -53,14 +34,13 @@
 
 .content {
   padding-top: $pad12;
-  max-height: calc(100vh - ($pad12 * 2 + $pad48 * 3) - $pad6);
+  // max-height: calc(100vh - ($pad12 * 2 + $pad48 * 3) - $pad6);
 }
 
 .backdrop {
-  background-color: rgba($paper, 0.5);
-  transition: backdrop-filter $fast;
+  background-color: rgba($dark, 0.5);
+}
 
-  &.blurred {
-    backdrop-filter: blur($pad6);
-  }
+.blurred {
+  backdrop-filter: blur($pad6);
 }
