@@ -1,7 +1,7 @@
 import { useBreakpointsContext } from "$/contexts";
 import { Item } from "$/components/timeline";
 import { NarrowText, Spacer } from "$/components/content";
-import { MainLink } from "$/components/link";
+import { MainLink } from "$/components/link/MainLink";
 import {
   CardsContainer,
   AboutCompanyCard,

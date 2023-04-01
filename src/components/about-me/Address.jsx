@@ -1,5 +1,5 @@
 import { Spacer } from "$/components/content";
-import { MainLink } from "$/components/link";
+import { MainLink } from "$/components/link/MainLink";
 
 export const Address = () => (
   <address>

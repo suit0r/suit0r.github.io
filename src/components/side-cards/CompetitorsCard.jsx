@@ -1,11 +1,11 @@
 import { makeClassName } from "$/helpers/makeClassName";
-import { MainLink } from "../link";
+import { MainLink } from "../link/MainLink";
 import styles from "./SideCards.module.scss";
 
 export const CompetitorsCardItem = (props) => (
   <li className={styles["competitors-card-item"]}>
     <div className="flex align__center">
-      <a href={props.competitor.website} target="ExternalFrame">
+      <a href={props.competitor.website} target="ExternalSuit0rFrame">
         <img
           src={props.competitor.favicon}
           alt=""
@@ -17,7 +17,7 @@ export const CompetitorsCardItem = (props) => (
       <div>
         <MainLink
           href={props.competitor.website}
-          target="ExternalFrame"
+          target="ExternalSuit0rFrame"
           className={makeClassName(
             "seamless",
             styles["competitors-card-item__link"]

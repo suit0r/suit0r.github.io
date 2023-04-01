@@ -14,3 +14,14 @@ export const Columns = (props) => (
     {props.children}
   </div>
 );
+
+export const TextColumns = (props) => (
+  <div
+    className={makeClassName(
+      props.className,
+      styles[`text-columns__${props.columns || 2}`]
+    )}
+  >
+    {props.children}
+  </div>
+);
