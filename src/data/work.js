@@ -1,5 +1,6 @@
 import { PACKAGE_ACTION, PREVIEW_ACTION } from "../constants";
 
+import jana from "../logos/jana.png";
 import nobul from "../logos/nobul.png";
 import cfib from "../logos/cfib.png";
 import girafo from "../logos/girafo.gif";
@@ -12,8 +13,41 @@ import care from "../logos/care.png";
 
 export const work = [
   {
-    startDate: "October 2019",
+    startDate: "May 2023",
     endDate: "Current",
+    employer: {
+      name: "JANA",
+      website: "https://www.janacorporation.com/",
+      logo: jana,
+      about:
+        "Providing natural gas providers with one-of-a-kind tools to manage risk, storage, and visualize assets.",
+      address: {
+        street: "1-305 Industrial Parkway South",
+        city: "Aurora",
+        region: "Ontario",
+        country: "Canada",
+      },
+    },
+    title: "Senior Full-Stack Developer",
+    techStack: ["React", "TypeScript", ".Net", "Azure"],
+    responsibilities: [
+      "Leverage proven development practices in agile environment",
+      "Conduct code reviews to ensure platform stability an extensibility",
+      "Provide mentorship and guidance to the software development team",
+      "Write clean, testable, maintainable, and performant code",
+      "Implement unit and end-to-end testing",
+      "Help the product, UX, and dev teams to ship user-friendly software",
+      "Implement quality standards, guidelines, and design patterns",
+      "Eliminate potential issues or risks within the platform",
+      "Secure the software with the latest industry trends and services",
+      "Cut down on tech debt and implement defensive code practices",
+      "Promote communication and knowledge sharing between teams",
+      "Implement source control and CI/CD best-practices",
+    ],
+  },
+  {
+    startDate: "October 2019",
+    endDate: "April 2023",
     employer: {
       name: "Nobul",
       website: "https://nobul.com",
