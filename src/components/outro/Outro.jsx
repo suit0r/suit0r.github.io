@@ -24,9 +24,9 @@ export const Outro = () => {
     <Item heading="Stay in Touch" icon={atSign}>
       <Spacer>
         <p>
-          Thank you for sticking around. I've included my socials, and email for
-          good measure, to keep the conversation going. I'll admit I'm not very
-          active on LinkedIn, but I'm a on Instagram all the time.
+          I'm looking forward to hearing from you. Let's keep the conversation
+          going on social media or keep it low key on email. I'm not very active
+          on LinkedIn, but I'm on Instagram all the time.
         </p>
       </Spacer>
       <Columns amount={columns}>
