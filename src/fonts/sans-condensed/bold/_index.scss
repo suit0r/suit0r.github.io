@@ -9,7 +9,7 @@
 //     url('#{$font-prefix}/IBM-Plex-Sans-Condensed/fonts/complete/woff/IBMPlexSansCondensed-Bold.woff') format('woff');
 // }
 
-// @import 'pi';
-@import 'latin3';
-@import 'latin2';
-@import 'latin1';
+// @use 'pi';
+@use "latin3";
+@use "latin2";
+@use "latin1";

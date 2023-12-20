@@ -1,4 +1,4 @@
-import { ReactComponent as DownloadIcon } from '../icons/download.svg';
+import DownloadIcon from "../icons/download.svg?react";
 
 export const Download = (props) => (
   <DownloadIcon

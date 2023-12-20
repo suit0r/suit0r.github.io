@@ -1,4 +1,4 @@
-$font-prefix: './fonts' !default;
+$font-prefix: "./fonts" !default;
 // @font-face {
 //   font-family: 'IBM Plex Sans Condensed';
 //   font-style: italic;
@@ -9,7 +9,7 @@ $font-prefix: './fonts' !default;
 //     url('#{$font-prefix}/IBM-Plex-Sans-Condensed/fonts/complete/woff/IBMPlexSansCondensed-BoldItalic.woff') format('woff');
 // }
 
-// @import 'pi';
-@import 'latin3';
-@import 'latin2';
-@import 'latin1';
+// @use 'pi';
+@use "latin3";
+@use "latin2";
+@use "latin1";

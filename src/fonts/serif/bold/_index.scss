@@ -9,8 +9,8 @@
 //     url('#{$font-prefix}/IBM-Plex-Serif/fonts/complete/woff/IBMPlexSerif-Bold.woff') format('woff');
 // }
 
-// @import 'cyrillic';
-// @import 'pi';
-@import 'latin3';
-@import 'latin2';
-@import 'latin1';
+// @use 'cyrillic';
+// @use 'pi';
+@use "latin3";
+@use "latin2";
+@use "latin1";

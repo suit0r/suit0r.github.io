@@ -1,6 +1,6 @@
-$font-prefix: '~.' !default;
+$font-prefix: "~." !default;
 
-@import 'sans/index';
-@import 'mono/index';
-// @import 'sans-condensed/index';
-// @import 'serif/index';
+@use "sans/index" as sans;
+@use "mono/index" as mono;
+// @use 'sans-condensed/index';
+// @use 'serif/index';
