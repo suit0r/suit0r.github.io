@@ -82,7 +82,7 @@ export const work = [
         },
       ],
     },
-    title: "Senior Front-end Dev, Team Lead",
+    title: "Senior Front-end Dev, Team&nbsp;Lead",
     techStack: ["React", "Node", "Postgres", "Firebase", "GCP"],
     responsibilities: [
       "Transitioned a custom SPA fully to Next.js",
