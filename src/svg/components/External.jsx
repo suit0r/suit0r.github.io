@@ -1,4 +1,4 @@
-import { ReactComponent as ExternalIcon } from '../icons/external-link.svg';
+import ExternalIcon from "../icons/external-link.svg?react";
 
 export const External = (props) => (
   <ExternalIcon

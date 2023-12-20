@@ -6,7 +6,7 @@ import { BreakpointsProvider, ToggleProvider } from "$/contexts";
 
 // styles
 import "normalize.css";
-import "./fonts/ibm-plex.scss";
+import "./scss/ibm-plex.scss";
 import "./index.scss";
 
 createRoot(document.getElementById("root")).render(

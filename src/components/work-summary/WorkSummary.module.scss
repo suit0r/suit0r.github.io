@@ -1,4 +1,4 @@
-@import "$/scss/vars";
+@import "/src/scss/_vars/index";
 
 .work {
   color: $blueblack;
@@ -21,7 +21,7 @@
 }
 
 .stack {
-  font-weight: bold;
+  font-weight: 700;
 
   img {
     vertical-align: middle;

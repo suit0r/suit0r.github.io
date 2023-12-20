@@ -1,9 +1,9 @@
-@import "$/scss/vars";
+@import "scss/_vars/_index";
 @import "scss/flex";
 @import "scss/typography";
 @import "scss/display";
 @import "scss/misc";
-// @import 'scsssrc/helpers';
+// @use 'scsssrc/helpers';
 
 :root {
   color: $blueblack;

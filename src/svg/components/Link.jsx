@@ -1,4 +1,4 @@
-import { ReactComponent as LinkIcon } from '../icons/link.svg';
+import LinkIcon from "../icons/link.svg?react";
 
 export const Link = (props) => (
   <LinkIcon className={props.className} style={props.style} role={props.role} />
