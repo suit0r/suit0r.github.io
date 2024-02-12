@@ -43,6 +43,8 @@ export const work = [
       "Cut down on tech debt and implement defensive code practices",
       "Promote communication and knowledge sharing between teams",
       "Implement source control and CI/CD best-practices",
+      "Audit automation and deployment scripts",
+      "Consolidate workflow tooling and third-party services"
     ],
   },
   {

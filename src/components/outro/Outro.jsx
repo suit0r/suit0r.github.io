@@ -21,7 +21,7 @@ export const Outro = () => {
   }, []);
 
   return (
-    <Item heading="Stay in Touch" icon={atSign}>
+    <Item heading="Stay in Touch" icon={atSign} className="no-print">
       <Spacer>
         <p>
           I'm looking forward to hearing from you. Let's keep the conversation

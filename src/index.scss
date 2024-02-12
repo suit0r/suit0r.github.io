@@ -21,3 +21,9 @@
 ::-moz-selection {
   background: $highlighter;
 }
+
+.no-print {
+  @media print {
+    display: none;
+  }
+}

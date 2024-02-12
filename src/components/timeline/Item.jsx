@@ -13,7 +13,9 @@ export const Item = (props) => {
   const { smallish } = useBreakpointsContext();
 
   return (
-    <li className={`${styles["timeline-item"]} relative`}>
+    <li
+      className={`${styles["timeline-item"]} relative ${props.className || ""}`}
+    >
       <article aria-labelledby={id} id={id}>
         <div className="flex align__center">
           {props.icon && !smallish && <ItemIcon icon={props.icon} />}

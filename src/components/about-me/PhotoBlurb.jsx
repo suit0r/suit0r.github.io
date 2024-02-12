@@ -4,7 +4,7 @@ import me from "$/img/me.jpg";
 import me2x from "$/img/me-212.jpg";
 
 export const PhotoBlurb = () => (
-  <div className={`${styles["photo-blurb"]}`}>
+  <div className={`${styles["photo-blurb"]} no-print`}>
     <img
       srcSet={`${me} 1x, ${me2x} 1.5x, ${me2x} 2x, ${me2x} 3x, ${me2x} 4x`}
       alt="A photo of me hiking on Smokey Hallow"

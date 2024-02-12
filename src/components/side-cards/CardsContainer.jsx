@@ -9,6 +9,7 @@ export const CardsContainer = (props) => {
   return (
     <div
       className={makeClassName(
+        "no-print",
         "flex",
         "wrap",
         "align__start",
