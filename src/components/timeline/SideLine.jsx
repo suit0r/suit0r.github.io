@@ -10,7 +10,7 @@ export const SideLine = () => (
     transition={{
       ease: "linear",
       type: "just",
-      duration: 1,
+      duration: 0.5,
     }}
   />
 );

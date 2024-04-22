@@ -1,14 +1,16 @@
+import { useState } from "react";
+
 import { Main } from "$/components/content";
-import { Timeline, SideLine } from "$/components/timeline";
+import { SideLine, Timeline } from "$/components/timeline";
 
-import { AboutMe } from "$/components/about-me";
 import { AboutDesign } from "$/components/about-design";
-import { WorkList } from "$/components/work-summary";
+import { AboutMe } from "$/components/about-me";
 import { Education } from "$/components/education";
-import { Outro } from "$/components/outro";
 import { Footer } from "$/components/footer";
+import { Outro } from "$/components/outro";
+import { WorkList } from "$/components/work-summary";
 
-import { useBreakpointsContext } from "$/contexts";
+import { useBreakpointsContext, useToggleContext } from "$/contexts";
 import { makeClassName } from "$/helpers";
 
 import styles from "./App.module.scss";

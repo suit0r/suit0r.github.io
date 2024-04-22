@@ -9,7 +9,12 @@ export const AboutDesign = () => {
   const { smallish } = useBreakpointsContext();
 
   return (
-    <Item heading="Motivation" icon={bookOpen} className="no-print">
+    <Item
+      stagger={333}
+      heading="Motivation"
+      icon={bookOpen}
+      className="no-print"
+    >
       <Spacer>
         <TextColumns columns={Number(!smallish) + 1}>
           <p>
