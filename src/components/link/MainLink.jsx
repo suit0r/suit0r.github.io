@@ -33,11 +33,13 @@ export const MainLink = (props) => {
     ]),
     children: [
       props.children,
-      <span key="link-icon" className="link-icon__wrap no-select">
-        {element !== "span" && (
-          <Icon role="presentation" className="link-icon" />
-        )}
-      </span>,
+      props.hideIcon ? undefined : (
+        <span key="link-icon" className="link-icon__wrap no-select">
+          {element !== "span" && (
+            <Icon role="presentation" className="link-icon" />
+          )}
+        </span>
+      ),
     ],
   });
 };
