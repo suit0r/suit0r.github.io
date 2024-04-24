@@ -1,9 +1,11 @@
 import { makeClassName } from "$/helpers";
+import { forwardRef } from "react";
 
 import styles from "./Content.module.scss";
 
-export const Columns = (props) => (
+const ColumnsRefRenderer = (props, ref) => (
   <div
+    ref={ref}
     className={makeClassName(
       props.className,
       styles.grid,
@@ -14,6 +16,8 @@ export const Columns = (props) => (
     {props.children}
   </div>
 );
+
+export const Columns = forwardRef(ColumnsRefRenderer);
 
 export const TextColumns = (props) => (
   <div

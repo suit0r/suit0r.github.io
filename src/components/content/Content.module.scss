@@ -36,6 +36,7 @@
 
 .spacer {
   margin: $pad 0;
+  transform-origin: left bottom;
 
   &__0 {
     margin: 0;
