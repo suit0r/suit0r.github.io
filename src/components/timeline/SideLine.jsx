@@ -1,16 +1,7 @@
-import { motion } from "framer-motion";
-
+import { useEffect } from "react";
 import styles from "./Timeline.module.scss";
 
-export const SideLine = () => (
-  <motion.div
-    className={`${styles.sideline} absolute`}
-    initial={{ height: 0, opacity: 0 }}
-    animate={{ height: `100%`, opacity: 1 }}
-    transition={{
-      ease: "linear",
-      type: "just",
-      duration: 0.5,
-    }}
-  />
-);
+// TODO: make this a transitioning line that tracks icons
+export const SideLine = () => {
+  return <div className={`${styles.sideline} absolute`} />;
+};

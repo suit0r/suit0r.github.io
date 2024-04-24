@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import { throttle } from 'lodash';
+import { Component } from "react";
+import throttle from "lodash/throttle";
 
 export class Angulator extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export class Angulator extends Component {
       _y: 0,
       x: 0,
       y: 0,
-      target: this.props.children
+      target: this.props.children,
     };
   }
 
@@ -42,7 +42,7 @@ export class Angulator extends Component {
   mouseleaveHandler = throttle(
     (e) => {
       const { firstElementChild } = e.target;
-      firstElementChild.style.transform = 'rotateX(0) rotateY(0)';
+      firstElementChild.style.transform = "rotateX(0) rotateY(0)";
     },
     222,
     { trailing: false }
@@ -69,7 +69,8 @@ export class Angulator extends Component {
         role="presentation"
         className="angulator overlay no-select"
         onMouseMove={this.mousemoveHandler}
-        onMouseLeave={this.mouseleaveHandler}>
+        onMouseLeave={this.mouseleaveHandler}
+      >
         {this.props.children}
       </div>
     );

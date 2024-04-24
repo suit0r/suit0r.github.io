@@ -15,14 +15,11 @@ export const PhotoBlurb = () => (
       className="float"
     />
     <p>
-      Hi there. That's me preparing to hike the{" "}
-      <MainLink hideIcon href="https://tourismhamilton.com/smokey-hollow/">
-        Smokey Hollow
-      </MainLink>
-      . It's a long and beautiful trail in Waterdown, Ontario, Canada parts of
-      which have been designed to mimic Offa's Dyke Path, in Wales, as a token
-      of friendship between the two countries. Does this hike qualify me as a
-      dual citizen? It was a treat, for sure.
+      Hi there. That's me preparing to hike the Smokey Hollow. It's a long and
+      beautiful trail in Waterdown, Ontario, Canada parts of which have been
+      designed to mimic Offa's Dyke Path, in Wales, as a token of friendship
+      between the two countries. Does this hike qualify me as a dual citizen? It
+      was a treat, for sure.
     </p>
     <p>
       Anyway, I'm a full-stack developer, in Toronto, specializing in front-end.

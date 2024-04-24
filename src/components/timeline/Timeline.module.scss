@@ -25,6 +25,7 @@
 .sideline {
   width: $border;
   background-color: $blueblack;
+  transform-origin: 0%;
   left: calc($border / 2 * -1);
   top: 0;
   bottom: 0;

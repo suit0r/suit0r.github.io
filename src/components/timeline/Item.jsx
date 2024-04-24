@@ -1,8 +1,8 @@
-import { createElement, useState, useEffect, useCallback, useRef } from "react";
+import { createElement, useEffect } from "react";
+import { useAnimate, useInView, stagger } from "framer-motion";
 import kebabCase from "lodash/kebabCase";
 
 import { useBreakpointsContext } from "$/contexts";
-import { useIntersectionObserver } from "$/hooks";
 
 import { ItemIcon } from "./ItemIcon";
 
@@ -13,47 +13,50 @@ export const Item = (props) => {
 
   const { smallish } = useBreakpointsContext();
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  const tid = useRef();
-
-  const animateOnVisible = useCallback(
-    (entry) => {
-      // TODO: sloppy. delayed only from top
-      if (props.stagger && !document.scrollingElement.scrollTop) {
-        setTimeout(() => {
-          setIsVisible(entry.isVisible);
-          // TODO: stagger amount plus sideline. bind to events
-        }, props.stagger + 555);
-      } else {
-        setIsVisible(entry.isVisible);
-      }
-    },
-    [props.stagger]
-  );
-
-  const observer = useIntersectionObserver(animateOnVisible);
-
-  const [target, setTarget] = useState(null);
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope);
 
   useEffect(() => {
-    if (target) {
-      observer.observe(target);
+    if (isInView) {
+      const startDelay = props.animDelay || 0;
 
-      return () => observer.unobserve(target);
+      animate(
+        `.${styles["item-icon"]}`,
+        {
+          scale: [0, 1],
+        },
+        {
+          type: "spring",
+          delay: stagger(0.1, {
+            startDelay,
+            ease: "anticipate",
+          }),
+        }
+      );
+
+      animate(
+        ".h2",
+        {
+          x: [-18, 0],
+        },
+        {
+          type: "spring",
+          delay: stagger(0.1, {
+            ease: "easeIn",
+          }),
+        }
+      );
     }
-
-    return () => clearTimeout(tid.current);
-  }, [target]);
+  }, [isInView, props.animDelay]);
 
   return (
     <li
       className={`${styles["timeline-item"]} relative ${props.className || ""}`}
     >
       <article aria-labelledby={id} id={id}>
-        <div ref={setTarget} className="flex align__center">
+        <div ref={scope} className="flex align__center">
           {props.icon && !smallish && (
-            <ItemIcon icon={props.icon} isVisible={isVisible} />
+            <ItemIcon icon={props.icon} animDelay={props.animDelay} />
           )}
           {createElement(`h${props.h || 2}`, {
             className: "h2",

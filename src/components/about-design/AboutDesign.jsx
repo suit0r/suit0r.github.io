@@ -8,9 +8,12 @@ import bookOpen from "$/svg/icons/book-open.svg";
 export const AboutDesign = () => {
   const { smallish } = useBreakpointsContext();
 
+  const { scrollTop } = document.scrollingElement;
+  const animDelay = scrollTop < 240 ? 0.25 : 0;
+
   return (
     <Item
-      stagger={333}
+      animDelay={animDelay}
       heading="Motivation"
       icon={bookOpen}
       className="no-print"
