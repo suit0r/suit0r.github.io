@@ -92,7 +92,7 @@ export const work = [
         },
       ],
     },
-    title: "Senior Front-end Dev, Team\u00a0Lead",
+    title: "Senior Front-End Developer, Team\u00a0Lead",
     techStack: ["React", "Node", "Postgres", "Firebase", "GCP"],
     responsibilities: [
       "Transitioned a custom SPA fully to Next.js",
@@ -102,7 +102,7 @@ export const work = [
       "Implementing performant and resilient architecture",
       "Maximizing user-friendly operation at scale",
       "Implementing resilient version control practices",
-      "Deploying Websockets and push notifications systems",
+      "Deploying WebSocket and push notifications backends",
       "Implemented real-time bug tracking for various departments",
       "Building internal dashboard with real-time communication",
       "Optimizing and safeguarding company asset delivery",
@@ -130,13 +130,13 @@ export const work = [
       about:
         "Canadian Finance Insurance Bureau is an association dedicated to helping consumers find the best businesses",
       address: {
-        street: "401-4141 Younge St.",
+        street: "401-4141 Yonge St.",
         city: "North York",
         region: "Ontario",
         country: "Canada",
       },
     },
-    title: "Front-end Contractor",
+    title: "Front-End Contractor",
     techStack: ["React", "Nextjs", "Redis", "Azure"],
     responsibilities: [
       "Audited CFIB website to meet AA WCAG requirements",
@@ -157,7 +157,7 @@ export const work = [
       about:
         "Girafo was a small, Canadian mortgage lender who wanted to simplify mortgage applications",
     },
-    title: "Front-end Contractor",
+    title: "Front-End Contractor",
     techStack: ["Vue", "Laravel", "MySQL", "Digital Ocean"],
     responsibilities: [
       "Set up a Vue.js front-end to handle dynamic mortgage applications",
@@ -231,7 +231,15 @@ export const work = [
       logo: freelance,
     },
     title: "Web Developer and UX/UI Designer",
-    techStack: ["jQuery", "Angular", "Vue", "MySQL", "MongoDb", "Firebase"],
+    techStack: [
+      "jQuery",
+      "Angular",
+      "Vue",
+      "MySQL",
+      "MongoDb",
+      "cPanel",
+      "Firebase",
+    ],
     responsibilities: [
       "Prototyped, developed, and maintained custom websites",
       "Consulted on industry trends and best-practices",
@@ -257,7 +265,7 @@ export const work = [
       },
     },
     title: "Communications Coordinator",
-    techStack: ["JavaScript", "Wordpress"],
+    techStack: ["HTML", "CSS", "JavaScript", "Wordpress"],
     responsibilities: [
       "Leveraged open-source technologies to save company resources",
       "Collected and routed user data to various databases",
@@ -287,7 +295,7 @@ export const work = [
       },
     },
     title: "Communications Associate",
-    techStack: ["JavaScript", "Wordpress"],
+    techStack: ["HTML", "CSS", "JavaScript", "Wordpress"],
     responsibilities: [
       "Coordinated syndication and Social Media strategies",
       "Designed and edited content for print and web",
