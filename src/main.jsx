@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import { BreakpointsProvider, ToggleProvider } from "$/contexts";
@@ -11,10 +12,12 @@ import "./index.scss";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BreakpointsProvider>
-      <ToggleProvider>
-        <App />
-      </ToggleProvider>
-    </BreakpointsProvider>
+    <BrowserRouter>
+      <BreakpointsProvider>
+        <ToggleProvider>
+          <App />
+        </ToggleProvider>
+      </BreakpointsProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
